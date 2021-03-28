@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    min-height: 100vh;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Container */
+.container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+/* Form Group */
+form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    font-family: 'Oswald', sans-serif;
+    height: 25px;
+    border: 2px solid grey;
+    border-radius: 3px;
+    outline: none;
+    transition: .3s;
+}
+
+input:focus {
+    filter: brightness(95%);
+}
+
+input:valid {
+    border: 2px solid rgb(37, 124, 255);
+}
+
+input:invalid {
+    border: 2px solid rgb(255, 25, 83);
+}
+
+button {
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(20, 20, 20);
+    margin-top: 8px;
+    border: none;
+    outline: none;
+    color: white;
+    width: 35%;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(20, 20, 20, 0.4);
+    border: 2px solid rgb(20, 20, 20);
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    color: rgb(20, 20, 20);
+    background-color: white;
+    border: 2px solid grey;
+}
+
+button:focus {
+    filter: brightness(125%);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 8px 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 400px) {
+    .container {
+        width: 94vw;
+    }
+}

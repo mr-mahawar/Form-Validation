@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="shortcut icon" type="image/jpg" href="fav-icon.png"/>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=google.com"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> -->
+</head>
+<body>
+    <div class="container">
+
+        <h1>Sign Up Today!</h1>
+
+        <!-- Form -->
+        <form id="form">
+
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Full Name"
+                    name="name"
+                    required
+                    minlength="3"
+                    maxlength="100"
+                >
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="10 Digit Mobile No."
+                    name="phone"
+                    required
+                    pattern="[0-9]{10}"
+                >
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="abc@pqr.xyz"
+                    name="email"
+                    required
+                >
+            </div>
+
+            <!-- Website URL -->
+            <div class="form-group">
+                <label for="website">Website URL</label>
+                <input type="url" id="website" placeholder="https://abc.xyz"
+                    name="website" 
+                    required
+                >
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Create Password (Min. 8 Characters)"
+                    required
+                    title="Please Include 1 Upper Case, 1 Lower Case , 1 Number, 1 Special Letter"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                >
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="Password" id="confirm-password" placeholder="Re-Enter Password"
+                    name="password"
+                    required
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                >
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Error / Success Message -->
+
+        <div class="message-container">
+            <h3 id="message">Take Your Time</h3>
+        </div>
+
+    </div>    
+
+    <!-- Script -->
+    <script src = "script.js"></script>
+</body>
+</html>
