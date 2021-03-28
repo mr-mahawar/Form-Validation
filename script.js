@@ -43,7 +43,7 @@ function storeFormData() {
         phone: form.phone.value,
         email: form.email.value,
         webiste: form.website.value,
-        password: form.password.value,
+        password: confirmPasswordEl.value,
     };
 
     // Do something with Object
