@@ -25,7 +25,7 @@ function validateForm() {
     }
     else {
         passwordMatch = false;
-        message.textContent = 'Make Sure Password Match';
+        message.textContent = 'Make Sure Passwords Match';
         message.style.color = 'rgb(255, 25, 83)';
         return;
     }
